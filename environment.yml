@@ -1,0 +1,10 @@
+name: burnout_streamlit
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas
+  - altair
+  - pip
+  - pip:
+      - streamlit
