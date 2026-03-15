@@ -1,5 +1,6 @@
 import pandas as pd
 import altair as alt
+alt.themes.enable("default")
 import streamlit as st
 from pathlib import Path
 
@@ -43,8 +44,8 @@ AI_BAND_COLORS = ["#D9A441", "#E38D53", "#7A3A2A"]
 # ---------- Data loading ----------
 @st.cache_data
 def load_dashboard_data() -> pd.DataFrame:
-    features = pd.read_csv("data/features.csv")
-    targets = pd.read_csv("data/targets.csv")
+    features = pd.read_csv("data/ai_productivity_features.csv")
+    targets = pd.read_csv("data/ai_productivity_targets.csv")
 
     df = features.merge(targets, on="Employee_ID")
 
